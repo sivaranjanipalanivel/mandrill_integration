@@ -6,10 +6,10 @@ except ImportError: # for pip <= 9.0.3
 	from pip.req import parse_requirements
 import re, ast, os
 
-# get version from __version__ variable in notification/__init__.py
+# get version from __version__ variable in mandrill_integration/__init__.py
 _version_re = re.compile(r'__version__\s+=\s+(.*)')
 
-with open('notification/__init__.py', 'rb') as f:
+with open('mandrill_integration/__init__.py', 'rb') as f:
 	version = str(ast.literal_eval(_version_re.search(
 		f.read().decode('utf-8')).group(1)))
 
